@@ -1,4 +1,4 @@
-function openTab(evt, cityName) {
+function openTab(evt,history,culture,fame) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -8,6 +8,10 @@ function openTab(evt, cityName) {
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(history).style.display = "block";
+    evt.currentTarget.className += " active";
+    document.getElementById(culture).style.display = "block";
+    evt.currentTarget.className += " active";
+    document.getElementById(fame).style.display = "block";
     evt.currentTarget.className += " active";
 }
